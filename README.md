@@ -30,3 +30,6 @@ config.json – network configuration
 node app.js
 ## Update Log
 Initial testing of vault storage on Aptos testnet.
+## Future Plan
+- Integrate Aptos smart contracts
+- Add decentralized storage verification
