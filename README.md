@@ -28,3 +28,5 @@ config.json – network configuration
 ## Run
 
 node app.js
+## Update Log
+Initial testing of vault storage on Aptos testnet.
