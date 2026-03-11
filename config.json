@@ -1,0 +1,4 @@
+{
+ "network":"aptos testnet",
+ "storage_mode":"hash verification"
+}
