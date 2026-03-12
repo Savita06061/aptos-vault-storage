@@ -1,2 +1,7 @@
 Vault test initialized
 Testing Aptos storage verification
+[2026-03-11] project initialized
+[2026-03-11] basic vault storage logic implemented
+[2026-03-12] added hashing simulation for records
+[2026-03-12] testing Aptos style storage workflow
+[2026-03-12] preparing integration for smart contract storage
