@@ -1,0 +1,5 @@
+{
+ "network":"aptos-testnet",
+ "rpc":"https://fullnode.testnet.aptoslabs.com",
+ "environment":"development"
+}
