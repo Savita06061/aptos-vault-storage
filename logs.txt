@@ -1,7 +1,16 @@
-Vault test initialized
-Testing Aptos storage verification
-[2026-03-11] project initialized
-[2026-03-11] basic vault storage logic implemented
-[2026-03-12] added hashing simulation for records
-[2026-03-12] testing Aptos style storage workflow
-[2026-03-12] preparing integration for smart contract storage
+Vault Test Logs
+----------------
+
+[2026-03-11] Project initialized
+[2026-03-11] Repository structure created
+[2026-03-11] Basic vault storage logic implemented
+
+[2026-03-12] Added hashing simulation for records
+[2026-03-12] Testing Aptos-style storage workflow
+[2026-03-12] Initial vault test initialized
+[2026-03-12] Testing Aptos storage verification
+
+[2026-03-12] Improving vault hashing module
+[2026-03-12] Testing storage workflow
+[2026-03-12] Preparing Aptos smart contract integration layer
+[2026-03-12] Updating configuration for testnet experiments
