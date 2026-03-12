@@ -2,3 +2,14 @@
  "network":"aptos testnet",
  "storage_mode":"hash verification"
 }
+{
+ "network":"aptos-testnet",
+ "storageMode":"simulation",
+ "vaultVersion":"0.1",
+ "developer":"aman",
+ "features":{
+  "hashStorage":true,
+  "recordVerification":true,
+  "testMode":true
+ }
+}
