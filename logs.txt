@@ -1,16 +1,54 @@
-Vault Test Logs
-----------------
+Vault Development Logs
+======================
 
-[2026-03-11] Project initialized
-[2026-03-11] Repository structure created
-[2026-03-11] Basic vault storage logic implemented
+Project: Vault – Secure Web3 Storage
+Environment: Aptos Testnet (Experimental)
+Developer: Aman
 
-[2026-03-12] Added hashing simulation for records
-[2026-03-12] Testing Aptos-style storage workflow
-[2026-03-12] Initial vault test initialized
-[2026-03-12] Testing Aptos storage verification
 
-[2026-03-12] Improving vault hashing module
-[2026-03-12] Testing storage workflow
-[2026-03-12] Preparing Aptos smart contract integration layer
-[2026-03-12] Updating configuration for testnet experiments
+[2026-03-11] Project Initialization
+-----------------------------------
+• Created initial repository structure
+• Added core project files (app.js, config.json, vault.json)
+• Implemented basic vault storage simulation
+• Initial testing of local JSON-based storage
+
+[2026-03-11] Storage Module Development
+--------------------------------------
+• Implemented simple record storage logic
+• Added user and hash based vault entries
+• Created initial vault.json test records
+• Tested file write operations for vault storage
+
+[2026-03-12] Hashing Module Update
+----------------------------------
+• Added hashing simulation for stored data
+• Tested hash generation for sample records
+• Verified basic data integrity workflow
+
+[2026-03-12] Vault Storage Testing
+----------------------------------
+• Ran multiple vault entry simulations
+• Tested record creation and logging
+• Validated storage workflow for development testing
+
+[2026-03-12] Aptos Integration Planning
+--------------------------------------
+• Reviewed Aptos-style storage architecture
+• Planned future smart contract integration
+• Preparing integration layer for on-chain verification
+• Updated configuration for Aptos testnet experiments
+
+[2026-03-12] Development Improvements
+------------------------------------
+• Refactoring vault storage logic
+• Preparing modular structure for future expansion
+• Planning decentralized storage verification system
+
+
+Next Planned Updates
+--------------------
+• Integrate Move smart contracts on Aptos
+• Add decentralized storage verification
+• Implement improved hashing and validation
+• Develop Web3 interface for vault interaction
