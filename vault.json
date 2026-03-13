@@ -1,29 +1,36 @@
 {
- "data":[
-  {"user":"test1","hash":"0x34ab9"},
-  {"user":"test2","hash":"0x98ff2"}
- ]
-}
-{"user":"demo2","hash":"0x123abc"}
-,
-{
- "user":"aman",
- "hash":"vault_928393",
- "time":"2026-03-12T12:20:00Z"
-}
-{
- "records":[
-  {
-   "user":"aman",
-   "hash":"vault_938392",
-   "created":"2026-03-12T12:10:00Z",
-   "network":"aptos-testnet"
-  },
-  {
-   "user":"testUser",
-   "hash":"vault_839201",
-   "created":"2026-03-12T12:20:00Z",
-   "network":"aptos-testnet"
-  }
- ]
+  "vaultVersion": "0.1",
+  "network": "aptos-testnet",
+  "records": [
+    {
+      "user": "test1",
+      "hash": "0x34ab9",
+      "created": "2026-03-11T10:00:00Z"
+    },
+    {
+      "user": "test2",
+      "hash": "0x98ff2",
+      "created": "2026-03-11T10:05:00Z"
+    },
+    {
+      "user": "demo2",
+      "hash": "0x123abc",
+      "created": "2026-03-11T11:00:00Z"
+    },
+    {
+      "user": "aman",
+      "hash": "vault_928393",
+      "created": "2026-03-12T12:20:00Z"
+    },
+    {
+      "user": "aman",
+      "hash": "vault_938392",
+      "created": "2026-03-12T12:10:00Z"
+    },
+    {
+      "user": "testUser",
+      "hash": "vault_839201",
+      "created": "2026-03-12T12:20:00Z"
+    }
+  ]
 }
