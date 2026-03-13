@@ -1,15 +1,28 @@
 {
- "network":"aptos testnet",
- "storage_mode":"hash verification"
-}
-{
- "network":"aptos-testnet",
- "storageMode":"simulation",
- "vaultVersion":"0.1",
- "developer":"aman",
- "features":{
-  "hashStorage":true,
-  "recordVerification":true,
-  "testMode":true
- }
+  "project": "Vault Secure Web3 Storage",
+  "vaultVersion": "0.1",
+  "developer": "aman",
+
+  "network": {
+    "name": "aptos-testnet",
+    "description": "Experimental Aptos testnet environment"
+  },
+
+  "storage": {
+    "mode": "hash-verification",
+    "type": "simulation",
+    "file": "vault.json"
+  },
+
+  "features": {
+    "hashStorage": true,
+    "recordVerification": true,
+    "testMode": true,
+    "logging": true
+  },
+
+  "security": {
+    "hashAlgorithm": "sha256",
+    "duplicateProtection": true
+  }
 }
