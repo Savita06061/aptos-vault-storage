@@ -1,0 +1,11 @@
+{
+  "name": "aptos-vault-storage",
+  "version": "1.0.0",
+  "description": "Secure Web3 vault storage experiment on Aptos",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "aman",
+  "license": "MIT"
+}
