@@ -1,5 +1,23 @@
 {
- "network":"aptos-testnet",
- "rpc":"https://fullnode.testnet.aptoslabs.com",
- "environment":"development"
+  "network": {
+    "name": "aptos-testnet",
+    "environment": "development",
+    "rpcUrl": "https://fullnode.testnet.aptoslabs.com",
+    "chain": "aptos"
+  },
+
+  "explorer": {
+    "name": "Aptos Explorer",
+    "url": "https://explorer.aptoslabs.com/?network=testnet"
+  },
+
+  "connection": {
+    "timeout": 10000,
+    "retryAttempts": 3
+  },
+
+  "status": {
+    "active": true,
+    "lastUpdated": "2026-03-12"
+  }
 }
