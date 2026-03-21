@@ -112,3 +112,7 @@ verifyRecord("test file data");
 
 // show vault records
 listRecords();
+// validate if hash exists in vault
+function validateHash(hash) {
+    return vault.includes(hash);
+}
