@@ -1,96 +1,82 @@
-🔐 Vault – Secure Web3 Storage (Aptos)
+# 🔐 Vault – Decentralized Data Verification System (Aptos)
 
-Vault is an experimental Web3 storage project focused on exploring decentralized and verifiable data storage within the Aptos ecosystem.
+Vault is a Web3-based experimental system designed to explore decentralized data verification using the Aptos blockchain.
 
-The project demonstrates how blockchain can be used to store and verify cryptographic data hashes, enabling transparent and tamper-proof record verification.
+This project focuses on building a lightweight infrastructure where data integrity can be validated using cryptographic hashes, simulating how real-world decentralized storage systems ensure tamper-proof records.
 
-🎯 Goal
+---
 
-The primary goal of this project is to:
+## 🚀 Overview
 
-Learn blockchain-based storage mechanisms
+In traditional systems, data can be modified without trace. Vault introduces a verification layer where:
 
-Experiment with verifiable data records
+- Data is converted into a cryptographic hash  
+- Hashes are stored and tracked  
+- Records can be verified anytime for integrity  
 
-Explore the Aptos testnet environment
+This mimics how decentralized systems maintain trust without relying on centralized authorities.
 
-Build a simple prototype for decentralized storage concepts
+---
 
-This repository serves as a learning and experimentation environment for Web3 infrastructure.
+## ⚙️ Current Implementation
 
-✨ Features
+The current version includes:
 
-🚀 Hash-Based Storage
-Store simple data hashes representing files or records.
+- Hash-based record storage (JSON simulation)  
+- Record verification mechanism  
+- Logging system for tracking development activity  
+- Modular structure for future blockchain integration  
 
-🔍 Record Verification
-Verify whether stored records exist in the vault.
+---
 
-🧪 Testnet Experiments
-Experiment with storage concepts on the Aptos testnet.
+## 📈 Latest Development Activity
 
-🌐 Web3 Exploration
-Understand how decentralized systems manage data integrity.
+### 🟢 March 23, 2026
+- Refactored vault data structure for scalability  
+- Improved logging system for better traceability  
+- Cleaned and optimized core logic  
 
-🛠 Tech Stack
-Technology	Purpose
-Aptos	Blockchain infrastructure
-Node.js	Backend runtime
-JSON Storage	Simulated data storage
-📂 Project Structure
-aptos-vault-storage
-│
-├── app.js        # Main application script
-├── vault.json    # Stored data hash records
-├── config.json   # Network configuration
-└── README.md     # Project documentation
-▶️ How to Run
+### 🟢 March 21, 2026
+- Enhanced record verification logic  
+- Improved hash validation workflow  
+- Added structured development logs  
 
-Make sure Node.js is installed.
+### 🟢 March 20, 2026
+- Added new vault test records  
+- Updated storage format for better organization  
+- Improved internal testing approach  
 
-Run the project with:
+---
 
-node app.js
+## 🧪 Ongoing Development
 
-This will start the Vault storage simulation.
+Currently working on:
 
-📜 Update Log
+- Preparing Aptos Move smart contract integration  
+- Designing on-chain verification flow  
+- Exploring decentralized storage compatibility  
+- Improving system architecture for scaling  
 
-Initial Development Phase
+---
 
-Implemented basic vault storage simulation
+## 📊 Development Status
 
-Added hash storage testing
+| Feature | Status |
+|--------|-------|
+| Hash Storage | ✅ Completed |
+| Record Verification | ✅ Completed |
+| Logging System | ✅ Active |
+| Smart Contract Integration | 🔄 In Progress |
+| Web3 UI (dApp) | 🔄 Planned |
 
-Tested basic record verification
+---
 
-Configured experimental testnet environment
+## 🛠 Tech Stack
 
-🚧 Future Plans
+- **Aptos** – Blockchain layer (planned integration)  
+- **Node.js** – Backend logic  
+- **JSON** – Temporary storage simulation  
 
-Planned improvements for the next version:
+---
 
-🔹 Integrate Move smart contracts on Aptos
-🔹 Add on-chain data verification
-🔹 Implement decentralized storage integration
-🔹 Develop a Web3 user interface (dApp)
-🔹 Connect with Web3 wallets for authentication
-
-📌 Project Status
-
-🧪 Experimental / Learning Project
-
-The project is currently in the prototype stage and is being developed for learning purposes within the Web3 ecosystem.
-
-🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to fork the repository, submit pull requests, or open issues to help improve the project.
-
-⭐ Support
-
-If you find this project interesting or useful:
-
-⭐ Star the repository on GitHub
-💡 Share feedback and ideas for improvements.
+## 📂 Project Structure
