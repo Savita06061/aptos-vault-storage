@@ -46,9 +46,21 @@ Developer: Aman
 • Planning decentralized storage verification system
 
 
+
 Next Planned Updates
 --------------------
 • Integrate Move smart contracts on Aptos
 • Add decentralized storage verification
 • Implement improved hashing and validation
 • Develop Web3 interface for vault interaction
+
+
+[2026-03-20] Vault Structure Enhancement
+----------------------------------------
+• Reviewed current vault.json data structure
+• Improved record organization for future scaling
+...
+
+[2026-03-21] Verification Logic Improvement
+-------------------------------------------
+...
