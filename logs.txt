@@ -6,61 +6,94 @@ Environment: Aptos Testnet (Experimental)
 Developer: Aman
 
 
-[2026-03-11] Project Initialization
------------------------------------
-• Created initial repository structure
-• Added core project files (app.js, config.json, vault.json)
-• Implemented basic vault storage simulation
-• Initial testing of local JSON-based storage
+[2026-03-11] 🚀 Project Initialization
+-------------------------------------
+• Initialized repository structure
+• Added core files (app.js, config.json, vault.json)
+• Implemented basic JSON-based vault storage
+• Completed initial local testing
 
-[2026-03-11] Storage Module Development
---------------------------------------
-• Implemented simple record storage logic
-• Added user and hash based vault entries
-• Created initial vault.json test records
-• Tested file write operations for vault storage
+Status: ✅ Completed
 
-[2026-03-12] Hashing Module Update
-----------------------------------
-• Added hashing simulation for stored data
-• Tested hash generation for sample records
-• Verified basic data integrity workflow
 
-[2026-03-12] Vault Storage Testing
-----------------------------------
-• Ran multiple vault entry simulations
-• Tested record creation and logging
-• Validated storage workflow for development testing
+[2026-03-11] 📦 Storage Module Development
+----------------------------------------
+• Implemented record storage logic
+• Added user + hash-based entries
+• Created initial test records in vault.json
+• Verified file write operations
 
-[2026-03-12] Aptos Integration Planning
---------------------------------------
-• Reviewed Aptos-style storage architecture
-• Planned future smart contract integration
-• Preparing integration layer for on-chain verification
-• Updated configuration for Aptos testnet experiments
+Status: ✅ Completed
 
-[2026-03-12] Development Improvements
+
+[2026-03-12] 🔐 Hashing Module Update
 ------------------------------------
-• Refactoring vault storage logic
-• Preparing modular structure for future expansion
-• Planning decentralized storage verification system
+• Integrated SHA-256 hashing for data
+• Tested hash generation workflow
+• Verified basic data integrity mechanism
 
+Status: ✅ Completed
+
+
+[2026-03-12] 🧪 Vault Storage Testing
+------------------------------------
+• Simulated multiple record insertions
+• Validated storage + retrieval flow
+• Confirmed consistency of stored hashes
+
+Status: ✅ Completed
+
+
+[2026-03-12] 🌐 Aptos Integration Planning
+-----------------------------------------
+• Analyzed Aptos-based storage architecture
+• Designed on-chain verification approach
+• Prepared integration strategy for smart contracts
+
+Status: 🔄 In Progress
+
+
+[2026-03-12] ⚙️ Development Improvements
+---------------------------------------
+• Refactored vault logic for scalability
+• Planned modular architecture (src structure)
+• Improved system design for future expansion
+
+Status: 🔄 In Progress
+
+
+[2026-03-20] 🧱 Vault Structure Enhancement
+------------------------------------------
+• Upgraded vault.json to scalable format
+• Added id, timestamp, and metadata fields
+• Prepared schema for IPFS and blockchain integration
+
+Status: ✅ Completed
+
+
+[2026-03-21] 🔍 Verification Logic Improvement
+---------------------------------------------
+• Enhanced record verification logic
+• Improved hash comparison workflow
+• Fixed edge cases in validation process
+
+Status: ✅ Completed
+
+
+[2026-03-27] 🛠 Latest Updates
+-----------------------------
+• Fixed bugs in app.js
+• Updated vault.json to production-like structure
+• Improved configuration and network separation
+• Enhanced project documentation (README)
+
+Status: ✅ Completed
 
 
 Next Planned Updates
 --------------------
-• Integrate Move smart contracts on Aptos
-• Add decentralized storage verification
-• Implement improved hashing and validation
-• Develop Web3 interface for vault interaction
-
-
-[2026-03-20] Vault Structure Enhancement
-----------------------------------------
-• Reviewed current vault.json data structure
-• Improved record organization for future scaling
-...
-
-[2026-03-21] Verification Logic Improvement
--------------------------------------------
-...
+• 🔄 Build Express API layer (store / verify / records)
+• 🔄 Integrate Aptos Move smart contracts
+• 🔄 Add IPFS-based decentralized storage
+• 🔄 Develop frontend dApp interface
+• 🔄 Implement wallet integration (Petra)
