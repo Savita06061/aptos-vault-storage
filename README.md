@@ -2,19 +2,27 @@
 
 Vault is a Web3-based experimental system designed to explore decentralized data verification using the Aptos blockchain.
 
-This project focuses on building a lightweight infrastructure where data integrity can be validated using cryptographic hashes, simulating how real-world decentralized storage systems ensure tamper-proof records.
+It provides a lightweight infrastructure where data integrity can be validated using cryptographic hashes — simulating how decentralized systems ensure tamper-proof and trustless records.
 
 ---
 
 ## 🚀 Overview
 
-In traditional systems, data can be modified without trace. Vault introduces a verification layer where:
+In traditional systems, data can be modified without transparency or traceability.
 
-- Data is converted into a cryptographic hash  
-- Hashes are stored and tracked  
-- Records can be verified anytime for integrity  
+Vault introduces a verification layer where:
+
+* Data is converted into a cryptographic hash
+* Hashes are securely stored and tracked
+* Records can be verified anytime for integrity
 
 This mimics how decentralized systems maintain trust without relying on centralized authorities.
+
+---
+
+## 🔄 Data Flow
+
+User → Input Data → Generate Hash → Store in Vault → Verify Anytime
 
 ---
 
@@ -22,29 +30,88 @@ This mimics how decentralized systems maintain trust without relying on centrali
 
 The current version includes:
 
-- Hash-based record storage (JSON simulation)  
-- Record verification mechanism  
-- Logging system for tracking development activity  
-- Modular structure for future blockchain integration  
+* ✅ Hash-based record storage (JSON simulation)
+* ✅ Record verification mechanism
+* ✅ Logging system for development tracking
+* ✅ Modular architecture for future blockchain integration
 
 ---
 
-## 📈 Latest Development Activity
+## 📡 API Endpoints
 
-### 🟢 March 23, 2026
-- Refactored vault data structure for scalability  
-- Improved logging system for better traceability  
-- Cleaned and optimized core logic  
+### ▶️ Store Data
 
-### 🟢 March 21, 2026
-- Enhanced record verification logic  
-- Improved hash validation workflow  
-- Added structured development logs  
+POST `/store`
 
-### 🟢 March 20, 2026
-- Added new vault test records  
-- Updated storage format for better organization  
-- Improved internal testing approach  
+Request:
+
+```
+{
+  "user": "aman",
+  "data": "hello world"
+}
+```
+
+Response:
+
+```
+{
+  "status": "stored",
+  "hash": "abc123xyz"
+}
+```
+
+---
+
+### ▶️ Verify Data
+
+POST `/verify`
+
+Request:
+
+```
+{
+  "data": "hello world"
+}
+```
+
+Response:
+
+```
+{
+  "verified": true
+}
+```
+
+---
+
+### ▶️ Get All Records
+
+GET `/records`
+
+Response:
+
+```
+[
+  {
+    "user": "aman",
+    "hash": "abc123xyz",
+    "timestamp": "2026-03-27T10:00:00Z"
+  }
+]
+```
+
+---
+
+## 📊 Development Status
+
+| Feature                    | Status         |
+| -------------------------- | -------------- |
+| Hash Storage               | ✅ Completed    |
+| Record Verification        | ✅ Completed    |
+| Logging System             | ✅ Active       |
+| Smart Contract Integration | 🔄 In Progress |
+| Web3 UI (dApp)             | 🔄 Planned     |
 
 ---
 
@@ -52,31 +119,69 @@ The current version includes:
 
 Currently working on:
 
-- Preparing Aptos Move smart contract integration  
-- Designing on-chain verification flow  
-- Exploring decentralized storage compatibility  
-- Improving system architecture for scaling  
-
----
-
-## 📊 Development Status
-
-| Feature | Status |
-|--------|-------|
-| Hash Storage | ✅ Completed |
-| Record Verification | ✅ Completed |
-| Logging System | ✅ Active |
-| Smart Contract Integration | 🔄 In Progress |
-| Web3 UI (dApp) | 🔄 Planned |
+* 🔄 Aptos Move smart contract integration
+* 🔄 On-chain hash verification
+* 🔄 IPFS / decentralized storage integration
+* 🔄 Frontend dApp UI
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Aptos** – Blockchain layer (planned integration)  
-- **Node.js** – Backend logic  
-- **JSON** – Temporary storage simulation  
+* **Aptos** – Blockchain layer (planned)
+* **Node.js** – Backend logic
+* **Express.js** – API layer
+* **JSON** – Temporary storage simulation
 
 ---
 
 ## 📂 Project Structure
+
+```
+├── src/              # Core modules (hashing, vault logic)
+├── app.js            # Main backend / API logic
+├── vault.json        # Stored records (simulation)
+├── network.json      # Network configuration
+├── config.json       # App configuration
+├── logs.txt          # Development logs
+├── package.json      # Dependencies
+└── README.md         # Documentation
+```
+
+---
+
+## 🔐 Core Concept
+
+Vault ensures **data integrity, not data storage**.
+
+Instead of storing raw data on-chain:
+
+* Only hashes are stored
+* Data can be verified anytime
+* Any tampering is instantly detectable
+
+---
+
+## 🚀 Future Vision
+
+* Full Aptos smart contract deployment
+* On-chain verification system
+* Wallet integration (Petra / Web3 wallets)
+* Real-world use cases:
+
+  * 📄 Document verification
+  * 🎓 Certificate validation
+  * 🏥 Medical record integrity
+  * 🧾 Digital ownership proofs
+
+---
+
+## 🤝 Contribution
+
+This is an experimental Web3 project. Contributions, ideas, and feedback are welcome.
+
+---
+
+## ⚠️ Disclaimer
+
+This project is for educational and experimental purposes only. Not intended for production use yet.
