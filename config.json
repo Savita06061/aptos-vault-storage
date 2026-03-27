@@ -1,32 +1,21 @@
 {
   "project": "Vault Secure Web3 Storage",
-  "vaultVersion": "1.0",
+  "version": "1.0",
   "developer": "aman",
 
-  "network": {
-    "name": "aptos-testnet",
-    "description": "Experimental Aptos testnet environment",
-    "chain_id": "testnet",
-    "rpc_url": "https://fullnode.testnet.aptoslabs.com",
-    "explorer": "https://explorer.aptoslabs.com",
-    "contract_address": "",
-    "version": "1.1",
-    "lastUpdated": "2026-03-27"
+  "app": {
+    "port": 3000,
+    "env": "development"
   },
 
   "storage": {
     "mode": "hash-verification",
-    "type": "simulation",
     "file": "vault.json"
   },
 
   "features": {
-    "hashStorage": true,
-    "recordVerification": true,
-    "testMode": true,
     "logging": true,
-    "on_chain_verification": false,
-    "ipfs_storage": false
+    "testMode": true
   },
 
   "security": {
