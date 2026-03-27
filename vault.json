@@ -1,41 +1,77 @@
 {
-  "vaultVersion": "0.1",
+  "vaultVersion": "1.0",
   "network": "aptos-testnet",
+  "lastUpdated": "2026-03-27T12:00:00Z",
   "records": [
     {
+      "id": "rec_001",
       "user": "test1",
       "hash": "0x34ab9",
-      "created": "2026-03-11T10:00:00Z"
+      "timestamp": "2026-03-11T10:00:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "initial test record"
     },
     {
+      "id": "rec_002",
       "user": "test2",
       "hash": "0x98ff2",
-      "created": "2026-03-11T10:05:00Z"
+      "timestamp": "2026-03-11T10:05:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "test entry"
     },
     {
+      "id": "rec_003",
       "user": "demo2",
       "hash": "0x123abc",
-      "created": "2026-03-11T11:00:00Z"
+      "timestamp": "2026-03-11T11:00:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "demo data"
     },
     {
+      "id": "rec_004",
       "user": "aman",
       "hash": "vault_928393",
-      "created": "2026-03-12T12:20:00Z"
+      "timestamp": "2026-03-12T12:20:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "user test record"
     },
     {
+      "id": "rec_005",
       "user": "aman",
       "hash": "vault_938392",
-      "created": "2026-03-12T12:10:00Z"
+      "timestamp": "2026-03-12T12:10:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "duplicate test scenario"
     },
     {
+      "id": "rec_006",
       "user": "testUser",
       "hash": "vault_839201",
-      "created": "2026-03-12T12:20:00Z"
+      "timestamp": "2026-03-12T12:20:00Z",
+      "source": "local",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "test user record"
+    },
+    {
+      "id": "rec_007",
+      "user": "system",
+      "hash": "newhash123",
+      "timestamp": "2026-03-21T00:00:00Z",
+      "source": "manual",
+      "ipfs_cid": null,
+      "on_chain": false,
+      "note": "added new test record"
     }
   ]
-}
-{
-  "hash": "newhash123",
-  "timestamp": "2026-03-21",
-  "note": "added new test record"
 }
