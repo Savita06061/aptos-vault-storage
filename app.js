@@ -10,7 +10,7 @@ function initVault() {
   if (!fs.existsSync(VAULT_FILE)) {
     const initial = { data: [] };
     fs.writeFileSync(VAULT_FILE, JSON.stringify(initial, null, 2));
-    console.log("Vault file created");
+    console.log("✅ Vault file created");
   }
 }
 
@@ -18,8 +18,13 @@ function initVault() {
    Read Vault
 ------------------------------*/
 function readVault() {
-  const raw = fs.readFileSync(VAULT_FILE);
-  return JSON.parse(raw);
+  try {
+    const raw = fs.readFileSync(VAULT_FILE);
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error("❌ Error reading vault:", err);
+    return { data: [] };
+  }
 }
 
 /* -----------------------------
@@ -33,12 +38,7 @@ function saveVault(vault) {
    Create Hash
 ------------------------------*/
 function createHash(input) {
-  const hash = crypto
-    .createHash("sha256")
-    .update(input)
-    .digest("hex");
-
-  return hash;
+  return crypto.createHash("sha256").update(input).digest("hex");
 }
 
 /* -----------------------------
@@ -49,23 +49,25 @@ function addRecord(user, data) {
   const hash = createHash(data);
 
   const entry = {
-    user: user,
-    hash: hash,
+    id: Date.now().toString(), // 🔥 unique id added
+    user,
+    data, // 🔥 store original data (optional but useful)
+    hash,
     createdAt: new Date().toISOString()
   };
 
   const already = vault.data.find(r => r.hash === hash);
 
   if (already) {
-    console.log("Record already exists in vault");
-    return;
+    console.log("⚠️ Record already exists in vault");
+    return already;
   }
 
   vault.data.push(entry);
   saveVault(vault);
 
-  console.log("New vault entry stored");
-  console.log(entry);
+  console.log("✅ New vault entry stored");
+  return entry;
 }
 
 /* -----------------------------
@@ -78,10 +80,11 @@ function verifyRecord(data) {
   const record = vault.data.find(r => r.hash === hash);
 
   if (record) {
-    console.log("Record verified");
-    console.log(record);
+    console.log("✅ Record verified");
+    return record;
   } else {
-    console.log("No matching record found");
+    console.log("❌ No matching record found");
+    return null;
   }
 }
 
@@ -91,16 +94,36 @@ function verifyRecord(data) {
 function listRecords() {
   const vault = readVault();
 
-  console.log("Vault Records:");
+  console.log("📂 Vault Records:");
   vault.data.forEach((r, i) => {
-    console.log(i + 1 + ".", r.user, "-", r.hash);
+    console.log(`${i + 1}. ${r.user} - ${r.hash}`);
   });
+
+  return vault.data;
 }
 
 /* -----------------------------
-   Start script
+   Validate hash (FIXED BUG)
 ------------------------------*/
+function validateHash(hash) {
+  const vault = readVault();
+  return vault.data.some(r => r.hash === hash);
+}
 
+/* -----------------------------
+   Export functions (🔥 important)
+------------------------------*/
+module.exports = {
+  addRecord,
+  verifyRecord,
+  listRecords,
+  validateHash,
+  createHash
+};
+
+/* -----------------------------
+   Start script (for testing)
+------------------------------*/
 initVault();
 
 // test entries
@@ -110,9 +133,5 @@ addRecord("aman", "test file data");
 // verify
 verifyRecord("test file data");
 
-// show vault records
+// show vault
 listRecords();
-// validate if hash exists in vault
-function validateHash(hash) {
-    return vault.includes(hash);
-}
