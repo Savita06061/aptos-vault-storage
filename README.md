@@ -1,39 +1,42 @@
 # 🔐 Vault – Decentralized Data Verification System (Aptos)
 
-Vault is a Web3-based experimental system designed to explore decentralized data verification using the Aptos blockchain.
-
-It provides a lightweight infrastructure where data integrity can be validated using cryptographic hashes — simulating how decentralized systems ensure tamper-proof and trustless records.
+> A lightweight Web3 system for tamper-proof data verification using cryptographic hashing.
 
 ---
 
 ## 🚀 Overview
 
-In traditional systems, data can be modified without transparency or traceability.
+Vault is a Web3-based experimental system designed to explore decentralized data verification using the Aptos blockchain.
 
-Vault introduces a verification layer where:
+In traditional systems, data can be modified without transparency or traceability. Vault introduces a verification layer where data integrity is ensured without relying on centralized authorities.
 
-* Data is converted into a cryptographic hash
+---
+
+## 🧠 Core Idea
+
+* Data is converted into a **cryptographic hash**
 * Hashes are securely stored and tracked
 * Records can be verified anytime for integrity
 
-This mimics how decentralized systems maintain trust without relying on centralized authorities.
+> ⚡ Vault ensures **data integrity, not data storage**
 
 ---
 
 ## 🔄 Data Flow
 
+```text
 User → Input Data → Generate Hash → Store in Vault → Verify Anytime
+```
 
 ---
 
-## ⚙️ Current Implementation
-
-The current version includes:
+## ⚙️ Features
 
 * ✅ Hash-based record storage (JSON simulation)
 * ✅ Record verification mechanism
 * ✅ Logging system for development tracking
-* ✅ Modular architecture for future blockchain integration
+* ✅ Modular backend architecture
+* 🔄 Smart contract integration (in progress)
 
 ---
 
@@ -41,20 +44,20 @@ The current version includes:
 
 ### ▶️ Store Data
 
-POST `/store`
+`POST /store`
 
-Request:
+**Request**
 
-```
+```json
 {
   "user": "aman",
   "data": "hello world"
 }
 ```
 
-Response:
+**Response**
 
-```
+```json
 {
   "status": "stored",
   "hash": "abc123xyz"
@@ -65,19 +68,19 @@ Response:
 
 ### ▶️ Verify Data
 
-POST `/verify`
+`POST /verify`
 
-Request:
+**Request**
 
-```
+```json
 {
   "data": "hello world"
 }
 ```
 
-Response:
+**Response**
 
-```
+```json
 {
   "verified": true
 }
@@ -87,11 +90,11 @@ Response:
 
 ### ▶️ Get All Records
 
-GET `/records`
+`GET /records`
 
-Response:
+**Response**
 
-```
+```json
 [
   {
     "user": "aman",
@@ -117,11 +120,9 @@ Response:
 
 ## 🧪 Ongoing Development
 
-Currently working on:
-
 * 🔄 Aptos Move smart contract integration
 * 🔄 On-chain hash verification
-* 🔄 IPFS / decentralized storage integration
+* 🔄 IPFS / decentralized storage
 * 🔄 Frontend dApp UI
 
 ---
@@ -137,7 +138,8 @@ Currently working on:
 
 ## 📂 Project Structure
 
-```
+```bash
+.
 ├── src/              # Core modules (hashing, vault logic)
 ├── app.js            # Main backend / API logic
 ├── vault.json        # Stored records (simulation)
@@ -150,55 +152,43 @@ Currently working on:
 
 ---
 
-## 🔐 Core Concept
+## 🆕 Latest Updates (May 2026)
 
-Vault ensures **data integrity, not data storage**.
-
-Instead of storing raw data on-chain:
-
-* Only hashes are stored
-* Data can be verified anytime
-* Any tampering is instantly detectable
+* ✅ Enhanced SHA-256 hashing utility
+* ✅ Improved verification response system
+* ✅ Optimized backend structure
+* ✅ Better API workflow handling
+* ✅ Updated documentation
 
 ---
 
 ## 🚀 Future Vision
 
----
-
-# 🆕 Latest Update (May 2026)
-
-### ✅ Improvements Added
-- Enhanced SHA-256 hashing utility
-- Improved verification response system
-- Better development log formatting
-- Updated project documentation
-- Optimized modular backend structure
-- Improved API workflow handling
-
-### 🔄 Upcoming Integrations
-- Aptos Move smart contract deployment
-- Wallet connectivity support
-- IPFS decentralized storage
-- On-chain verification mechanism
-- Frontend dashboard UI
-
-### 📌 Development Notes
-The project architecture is being prepared for full Web3 compatibility and scalable decentralized verification workflows.
-
-Current focus areas:
-- Security improvements
-- Performance optimization
-- Blockchain integration readiness
-- Better developer experience
+* 🔄 Aptos Move smart contract deployment
+* 🔄 Wallet connectivity
+* 🔄 IPFS integration
+* 🔄 On-chain verification
+* 🔄 Frontend dashboard UI
 
 ---
 
-# 📅 Recent Activity
+## 📌 Development Notes
 
-```bash
-Latest Commit:
-improve verification flow and project documentation
+The architecture is being designed for:
+
+* ⚡ Scalability
+* 🔐 Security improvements
+* ⚙️ Performance optimization
+* 🌐 Full Web3 integration
+
+---
+
+## 📅 Recent Activity
+
+**Latest Commit:**
+`feat: improve verification flow and update documentation`
+
+---
 
 ## 🤝 Contribution
 
@@ -208,4 +198,5 @@ This is an experimental Web3 project. Contributions, ideas, and feedback are wel
 
 ## ⚠️ Disclaimer
 
-This project is for educational and experimental purposes only. Not intended for production use yet.
+This project is for educational and experimental purposes only.
+Not intended for production use yet.
