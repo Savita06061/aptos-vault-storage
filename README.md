@@ -164,17 +164,41 @@ Instead of storing raw data on-chain:
 
 ## 🚀 Future Vision
 
-* Full Aptos smart contract deployment
-* On-chain verification system
-* Wallet integration (Petra / Web3 wallets)
-* Real-world use cases:
+---
 
-  * 📄 Document verification
-  * 🎓 Certificate validation
-  * 🏥 Medical record integrity
-  * 🧾 Digital ownership proofs
+# 🆕 Latest Update (May 2026)
+
+### ✅ Improvements Added
+- Enhanced SHA-256 hashing utility
+- Improved verification response system
+- Better development log formatting
+- Updated project documentation
+- Optimized modular backend structure
+- Improved API workflow handling
+
+### 🔄 Upcoming Integrations
+- Aptos Move smart contract deployment
+- Wallet connectivity support
+- IPFS decentralized storage
+- On-chain verification mechanism
+- Frontend dashboard UI
+
+### 📌 Development Notes
+The project architecture is being prepared for full Web3 compatibility and scalable decentralized verification workflows.
+
+Current focus areas:
+- Security improvements
+- Performance optimization
+- Blockchain integration readiness
+- Better developer experience
 
 ---
+
+# 📅 Recent Activity
+
+```bash
+Latest Commit:
+improve verification flow and project documentation
 
 ## 🤝 Contribution
 
