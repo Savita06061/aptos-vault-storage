@@ -1,12 +1,15 @@
 {
   "name": "aptos-vault-storage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Decentralized data verification system using cryptographic hashing on Aptos blockchain",
   "main": "app.js",
 
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "echo \"Linting not configured\"",
+    "clean": "rm -f logs.txt"
   },
 
   "keywords": [
@@ -16,11 +19,17 @@
     "data-verification",
     "hashing",
     "decentralized",
-    "vault"
+    "vault",
+    "crypto",
+    "integrity"
   ],
 
   "author": "aman",
   "license": "MIT",
+
+  "engines": {
+    "node": ">=18.0.0"
+  },
 
   "dependencies": {
     "express": "^4.18.2"
