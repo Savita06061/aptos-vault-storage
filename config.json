@@ -1,25 +1,40 @@
 {
   "project": "Vault Secure Web3 Storage",
-  "version": "1.0",
+  "version": "1.1.0",
   "developer": "aman",
 
   "app": {
     "port": 3000,
-    "env": "development"
+    "env": "development",
+    "baseUrl": "http://localhost:3000"
   },
 
   "storage": {
     "mode": "hash-verification",
-    "file": "vault.json"
+    "file": "vault.json",
+    "backup": true
   },
 
   "features": {
     "logging": true,
-    "testMode": true
+    "testMode": false,
+    "apiEnabled": true
   },
 
   "security": {
     "hashAlgorithm": "sha256",
-    "duplicateProtection": true
+    "duplicateProtection": true,
+    "rateLimit": true
+  },
+
+  "network": {
+    "provider": "aptos",
+    "network": "testnet",
+    "rpcUrl": "https://fullnode.testnet.aptoslabs.com"
+  },
+
+  "logging": {
+    "level": "info",
+    "file": "logs.txt"
   }
 }
