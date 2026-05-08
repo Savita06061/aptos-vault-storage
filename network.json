@@ -4,7 +4,8 @@
     "environment": "development",
     "chain": "aptos",
     "chain_id": "testnet",
-    "rpc_url": "https://fullnode.testnet.aptoslabs.com"
+    "rpc_url": "https://fullnode.testnet.aptoslabs.com",
+    "fallback_rpc": "https://aptos-testnet.publicnode.com"
   },
 
   "explorer": {
@@ -14,26 +15,32 @@
 
   "contract": {
     "address": "",
-    "deployed": false
+    "deployed": false,
+    "module": "vault_storage",
+    "lastDeployment": null
   },
 
   "wallet": {
     "provider": "petra",
+    "supportedWallets": ["petra", "martian"],
     "connected": false
   },
 
   "connection": {
     "timeout": 10000,
-    "retryAttempts": 3
+    "retryAttempts": 3,
+    "autoReconnect": true
   },
 
   "features": {
     "on_chain_verification": false,
-    "ipfs_storage": false
+    "ipfs_storage": false,
+    "event_tracking": false
   },
 
   "status": {
     "active": true,
-    "lastUpdated": "2026-03-27"
+    "lastUpdated": "2026-05-08",
+    "health": "stable"
   }
 }
