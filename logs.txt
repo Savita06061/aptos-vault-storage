@@ -1,99 +1,38 @@
-Vault Development Logs
-======================
-
-Project: Vault – Secure Web3 Storage
-Environment: Aptos Testnet (Experimental)
-Developer: Aman
-
-
-[2026-03-11] 🚀 Project Initialization
--------------------------------------
-• Initialized repository structure
-• Added core files (app.js, config.json, vault.json)
-• Implemented basic JSON-based vault storage
-• Completed initial local testing
+[2026-05-08] 🚀 System Enhancement & API Preparation
+---------------------------------------------------
+• Improved vault core logic with better validation checks
+• Added UUID-based unique record identification
+• Enhanced error handling across modules
+• Optimized hashing workflow for consistency
 
 Status: ✅ Completed
 
 
-[2026-03-11] 📦 Storage Module Development
-----------------------------------------
-• Implemented record storage logic
-• Added user + hash-based entries
-• Created initial test records in vault.json
-• Verified file write operations
-
-Status: ✅ Completed
-
-
-[2026-03-12] 🔐 Hashing Module Update
-------------------------------------
-• Integrated SHA-256 hashing for data
-• Tested hash generation workflow
-• Verified basic data integrity mechanism
-
-Status: ✅ Completed
-
-
-[2026-03-12] 🧪 Vault Storage Testing
-------------------------------------
-• Simulated multiple record insertions
-• Validated storage + retrieval flow
-• Confirmed consistency of stored hashes
-
-Status: ✅ Completed
-
-
-[2026-03-12] 🌐 Aptos Integration Planning
------------------------------------------
-• Analyzed Aptos-based storage architecture
-• Designed on-chain verification approach
-• Prepared integration strategy for smart contracts
+[2026-05-08] 🔌 Backend API Preparation
+--------------------------------------
+• Prepared codebase for Express API integration
+• Structured functions for route-based usage
+• Improved modular export system
+• Enabled cleaner response formatting for API output
 
 Status: 🔄 In Progress
 
 
-[2026-03-12] ⚙️ Development Improvements
+[2026-05-08] 🌐 Network & Config Upgrade
 ---------------------------------------
-• Refactored vault logic for scalability
-• Planned modular architecture (src structure)
-• Improved system design for future expansion
-
-Status: 🔄 In Progress
-
-
-[2026-03-20] 🧱 Vault Structure Enhancement
-------------------------------------------
-• Upgraded vault.json to scalable format
-• Added id, timestamp, and metadata fields
-• Prepared schema for IPFS and blockchain integration
+• Updated network.json with fallback RPC support
+• Added wallet compatibility configuration
+• Enhanced config.json with logging & security settings
+• Prepared system for Aptos testnet interaction
 
 Status: ✅ Completed
 
 
-[2026-03-21] 🔍 Verification Logic Improvement
----------------------------------------------
-• Enhanced record verification logic
-• Improved hash comparison workflow
-• Fixed edge cases in validation process
+[2026-05-08] 📦 Project Optimization
+-----------------------------------
+• Improved package.json with additional scripts
+• Added development utilities (nodemon support)
+• Cleaned and structured project configuration files
+• Prepared repository for scalable development
 
 Status: ✅ Completed
-
-
-[2026-03-27] 🛠 Latest Updates
------------------------------
-• Fixed bugs in app.js
-• Updated vault.json to production-like structure
-• Improved configuration and network separation
-• Enhanced project documentation (README)
-
-Status: ✅ Completed
-
-
-Next Planned Updates
---------------------
-• 🔄 Build Express API layer (store / verify / records)
-• 🔄 Integrate Aptos Move smart contracts
-• 🔄 Add IPFS-based decentralized storage
-• 🔄 Develop frontend dApp interface
-• 🔄 Implement wallet integration (Petra)
