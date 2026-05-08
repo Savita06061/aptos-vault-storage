@@ -10,7 +10,7 @@ function initVault() {
   if (!fs.existsSync(VAULT_FILE)) {
     const initial = { data: [] };
     fs.writeFileSync(VAULT_FILE, JSON.stringify(initial, null, 2));
-    console.log("✅ Vault file created");
+    console.log("✅ Vault initialized");
   }
 }
 
@@ -19,10 +19,10 @@ function initVault() {
 ------------------------------*/
 function readVault() {
   try {
-    const raw = fs.readFileSync(VAULT_FILE);
+    const raw = fs.readFileSync(VAULT_FILE, "utf-8");
     return JSON.parse(raw);
   } catch (err) {
-    console.error("❌ Error reading vault:", err);
+    console.error("❌ Error reading vault:", err.message);
     return { data: [] };
   }
 }
@@ -31,13 +31,20 @@ function readVault() {
    Save Vault
 ------------------------------*/
 function saveVault(vault) {
-  fs.writeFileSync(VAULT_FILE, JSON.stringify(vault, null, 2));
+  try {
+    fs.writeFileSync(VAULT_FILE, JSON.stringify(vault, null, 2));
+  } catch (err) {
+    console.error("❌ Error saving vault:", err.message);
+  }
 }
 
 /* -----------------------------
-   Create Hash
+   Create Hash (Enhanced)
 ------------------------------*/
 function createHash(input) {
+  if (!input) {
+    throw new Error("Invalid input for hashing");
+  }
   return crypto.createHash("sha256").update(input).digest("hex");
 }
 
@@ -45,28 +52,32 @@ function createHash(input) {
    Add record to vault
 ------------------------------*/
 function addRecord(user, data) {
+  if (!user || !data) {
+    console.log("⚠️ User and data are required");
+    return null;
+  }
+
   const vault = readVault();
   const hash = createHash(data);
 
+  const existing = vault.data.find(r => r.hash === hash);
+  if (existing) {
+    console.log("⚠️ Record already exists");
+    return existing;
+  }
+
   const entry = {
-    id: Date.now().toString(), // 🔥 unique id added
+    id: crypto.randomUUID(), // 🔥 improved unique ID
     user,
-    data, // 🔥 store original data (optional but useful)
+    data,
     hash,
     createdAt: new Date().toISOString()
   };
 
-  const already = vault.data.find(r => r.hash === hash);
-
-  if (already) {
-    console.log("⚠️ Record already exists in vault");
-    return already;
-  }
-
   vault.data.push(entry);
   saveVault(vault);
 
-  console.log("✅ New vault entry stored");
+  console.log("✅ Record stored successfully");
   return entry;
 }
 
@@ -74,6 +85,11 @@ function addRecord(user, data) {
    Verify record
 ------------------------------*/
 function verifyRecord(data) {
+  if (!data) {
+    console.log("⚠️ Data required for verification");
+    return null;
+  }
+
   const vault = readVault();
   const hash = createHash(data);
 
@@ -81,11 +97,11 @@ function verifyRecord(data) {
 
   if (record) {
     console.log("✅ Record verified");
-    return record;
-  } else {
-    console.log("❌ No matching record found");
-    return null;
+    return { verified: true, record };
   }
+
+  console.log("❌ No matching record found");
+  return { verified: false };
 }
 
 /* -----------------------------
@@ -94,44 +110,64 @@ function verifyRecord(data) {
 function listRecords() {
   const vault = readVault();
 
-  console.log("📂 Vault Records:");
+  console.log(`📂 Total Records: ${vault.data.length}`);
   vault.data.forEach((r, i) => {
-    console.log(`${i + 1}. ${r.user} - ${r.hash}`);
+    console.log(`${i + 1}. ${r.user} | ${r.hash.slice(0, 10)}...`);
   });
 
   return vault.data;
 }
 
 /* -----------------------------
-   Validate hash (FIXED BUG)
+   Validate hash
 ------------------------------*/
 function validateHash(hash) {
+  if (!hash) return false;
+
   const vault = readVault();
   return vault.data.some(r => r.hash === hash);
 }
 
 /* -----------------------------
-   Export functions (🔥 important)
+   Delete record (NEW FEATURE)
+------------------------------*/
+function deleteRecord(hash) {
+  const vault = readVault();
+  const updated = vault.data.filter(r => r.hash !== hash);
+
+  if (updated.length === vault.data.length) {
+    console.log("⚠️ No record found to delete");
+    return false;
+  }
+
+  vault.data = updated;
+  saveVault(vault);
+
+  console.log("🗑️ Record deleted");
+  return true;
+}
+
+/* -----------------------------
+   Export functions
 ------------------------------*/
 module.exports = {
   addRecord,
   verifyRecord,
   listRecords,
   validateHash,
-  createHash
+  createHash,
+  deleteRecord // 🔥 new export
 };
 
 /* -----------------------------
-   Start script (for testing)
+   Run only if executed directly
 ------------------------------*/
-initVault();
+if (require.main === module) {
+  initVault();
 
-// test entries
-addRecord("test1", "sample data 1");
-addRecord("aman", "test file data");
+  console.log("\n🚀 Running Vault Demo...\n");
 
-// verify
-verifyRecord("test file data");
-
-// show vault
-listRecords();
+  addRecord("aman", "test file data");
+  verifyRecord("test file data");
+  listRecords();
+}
