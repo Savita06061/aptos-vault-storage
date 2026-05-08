@@ -1,7 +1,8 @@
 {
-  "vaultVersion": "1.0",
+  "vaultVersion": "1.1",
   "network": "aptos-testnet",
-  "lastUpdated": "2026-03-27T12:00:00Z",
+  "lastUpdated": "2026-05-08T18:30:00Z",
+
   "records": [
     {
       "id": "rec_001",
@@ -14,26 +15,6 @@
       "note": "initial test record"
     },
     {
-      "id": "rec_002",
-      "user": "test2",
-      "hash": "0x98ff2",
-      "timestamp": "2026-03-11T10:05:00Z",
-      "source": "local",
-      "ipfs_cid": null,
-      "on_chain": false,
-      "note": "test entry"
-    },
-    {
-      "id": "rec_003",
-      "user": "demo2",
-      "hash": "0x123abc",
-      "timestamp": "2026-03-11T11:00:00Z",
-      "source": "local",
-      "ipfs_cid": null,
-      "on_chain": false,
-      "note": "demo data"
-    },
-    {
       "id": "rec_004",
       "user": "aman",
       "hash": "vault_928393",
@@ -43,35 +24,46 @@
       "on_chain": false,
       "note": "user test record"
     },
+
     {
-      "id": "rec_005",
+      "id": "rec_008",
       "user": "aman",
-      "hash": "vault_938392",
-      "timestamp": "2026-03-12T12:10:00Z",
-      "source": "local",
+      "hash": "0xa93bd82f1c",
+      "timestamp": "2026-05-08T18:10:00Z",
+      "source": "api",
       "ipfs_cid": null,
       "on_chain": false,
-      "note": "duplicate test scenario"
+      "note": "new record via improved hashing logic"
     },
     {
-      "id": "rec_006",
-      "user": "testUser",
-      "hash": "vault_839201",
-      "timestamp": "2026-03-12T12:20:00Z",
-      "source": "local",
+      "id": "rec_009",
+      "user": "devUser",
+      "hash": "0xb72ac91e55",
+      "timestamp": "2026-05-08T18:15:00Z",
+      "source": "api",
       "ipfs_cid": null,
       "on_chain": false,
-      "note": "test user record"
+      "note": "testing API-based storage flow"
     },
     {
-      "id": "rec_007",
+      "id": "rec_010",
       "user": "system",
-      "hash": "newhash123",
-      "timestamp": "2026-03-21T00:00:00Z",
-      "source": "manual",
-      "ipfs_cid": null,
+      "hash": "0xipfs98213",
+      "timestamp": "2026-05-08T18:20:00Z",
+      "source": "ipfs",
+      "ipfs_cid": "QmTestCID123456",
       "on_chain": false,
-      "note": "added new test record"
+      "note": "ipfs integration simulation"
+    },
+    {
+      "id": "rec_011",
+      "user": "aman",
+      "hash": "0xchain88321",
+      "timestamp": "2026-05-08T18:25:00Z",
+      "source": "on-chain",
+      "ipfs_cid": null,
+      "on_chain": true,
+      "note": "simulated on-chain verification record"
     }
   ]
 }
